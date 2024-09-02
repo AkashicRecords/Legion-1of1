@@ -63,7 +63,51 @@ Orchestration Agent is a Python-based project that sets up a virtual environment
    ```
    python Orcastration_Agent/verify_libraries.py
    ```
+## Setting up a Virtual Environment
 
+To isolate the project dependencies and ensure a clean development environment, it's recommended to use a virtual environment. Follow these steps:
+
+1. Navigate to the project directory:
+   ```
+   cd path/to/Orcastration_Agent
+   ```
+
+2. Create a new virtual environment:
+   ```
+   python3 -m venv myenv
+   ```
+
+3. Activate the virtual environment:
+   - On macOS and Linux:
+     ```
+     source myenv/bin/activate
+     ```
+   - On Windows:
+     ```
+     myenv\Scripts\activate
+     ```
+
+4. Your prompt should change to indicate that the virtual environment is active.
+
+5. Run the setup scripts within this environment:
+   ```
+   python setup_core.py
+   python setup_mobile.py
+   python setup_cloud.py
+   python setup_sub_agents.py
+   ```
+
+6. Verify the installation:
+   ```
+   python verify_libraries.py
+   ```
+
+7. You can now run the main orchestration agent script:
+   ```
+   python orchestration_agent.py
+   ```
+
+Remember to activate the virtual environment each time you work on the project. When you're done, you can deactivate the environment by typing:
 ## Configuration
 
 1. Create a `config.json` file to specify sub-agents and task routing:
